@@ -2,7 +2,7 @@ import { serve } from 'https://deno.land/std@0.176.0/http/server.ts'
 import { assertEquals } from 'https://deno.land/std@0.176.0/testing/asserts.ts'
 import { Client } from './client.ts'
 import { Server } from './server.ts'
-import { WebFinger, Data } from './webfinger.ts'
+import { Data, WebFinger } from './webfinger.ts'
 
 Deno.test(async function testWebFinger() {
 	const srv = Server((arg: WebFinger): Promise<Data> =>

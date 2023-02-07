@@ -1,5 +1,5 @@
 import { Handler } from 'https://deno.land/std@0.176.0/http/server.ts'
-import { WebFinger, Data, WebFingerPath } from './webfinger.ts'
+import { Data, WebFinger, WebFingerPath } from './webfinger.ts'
 
 export const Server = (cfg: (query: WebFinger) => Promise<Data>): Handler => {
 	return (request) => {
